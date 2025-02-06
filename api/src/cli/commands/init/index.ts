@@ -70,7 +70,7 @@ export default async function init(): Promise<void> {
 	await createEnv(dbClient, credentials!, rootPath);
 
 	process.stdout.write('\nCreate your first admin user:\n\n');
-
+   
 	const firstUser = await inquirer.prompt([
 		{
 			type: 'input',
