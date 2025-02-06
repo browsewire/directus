@@ -62,17 +62,6 @@ USER node
 
 WORKDIR /directus
 
-ENV \
-    DB_CLIENT="pg" \
-    DB_HOST="postgres_db" \
-    DB_PORT="5432" \
-    DB_DATABASE="directus" \
-    DB_USER="directus" \
-    DB_PASSWORD="directus" \
-    NODE_ENV="production" \
-    NPM_CONFIG_UPDATE_NOTIFIER="false"
-
-
 COPY --from=builder --chown=node:node /directus/ecosystem.config.cjs .
 COPY --from=builder --chown=node:node /directus/dist .
 
